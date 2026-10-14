@@ -1,0 +1,9 @@
+**/bin/
+**/obj/
+**/.idea/
+**/.vs/
+**/*.user
+**/*.DotSettings.user
+tests/
+Dockerfile
+docker-compose.yml

@@ -1,0 +1,59 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+artifacts/
+publish/
+efbundle
+efbundle.exe
+*.binlog
+
+# Tests and coverage
+[Tt]est[Rr]esults/
+*.trx
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.coveragexml
+BenchmarkDotNet.Artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# IDE
+.vs/
+.idea/
+*.sln.iml
+*.user
+*.suo
+*.userprefs
+*.DotSettings.user
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.code-workspace
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+compose.override.yml
+docker-compose.override.yml
+*.pfx
+*.p12
+
+# Logs
+*.log
+[Ll]ogs/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~

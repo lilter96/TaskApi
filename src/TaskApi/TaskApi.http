@@ -1,0 +1,44 @@
+@baseUrl = http://localhost:5080
+@taskId = 00000000-0000-0000-0000-000000000000
+
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Buy milk",
+  "priority": "High"
+}
+
+###
+
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+Idempotency-Key: 6b1f5c1e-2a7d-4c3b-9e8f-0d4a5b6c7d8e
+
+{
+  "title": "Pay rent"
+}
+
+###
+
+GET {{baseUrl}}/tasks
+
+###
+
+GET {{baseUrl}}/tasks?isCompleted=false&priority=high&sort=-priority&offset=0&limit=20
+
+###
+
+GET {{baseUrl}}/tasks/{{taskId}}
+
+###
+
+PUT {{baseUrl}}/tasks/{{taskId}}/complete
+
+###
+
+DELETE {{baseUrl}}/tasks/{{taskId}}
+
+###
+
+GET {{baseUrl}}/health/ready
